@@ -1,9 +1,9 @@
-import React,{useState,useEffect} from 'react';
-import FormInput from '../form-input/form-input.component';
-import CustomButton from '../custom-button/custom-buttom.component';
-
-import {auth,createUserProfileDocument} from '../../firebase/firebase.utils';
+import React, {useState} from 'react';
 import {batch} from 'react-redux';
+import {auth, createUserProfileDocument} from '../../firebase/firebase.utils';
+import CustomButton from '../custom-button/custom-buttom.component';
+import FormInput from '../form-input/form-input.component';
+
 
 const SignUp  = ()=>{
   const [displayName,setDisplayName] = useState('');
@@ -13,7 +13,7 @@ const SignUp  = ()=>{
 
   const handleSubmit = async event  =>{
     event.preventDefault();
-    if(password !=confirmPassword){
+    if(password !== confirmPassword){
       alert('password dont match');
       return;
     }

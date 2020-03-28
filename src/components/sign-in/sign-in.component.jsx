@@ -40,7 +40,7 @@ return(
     <FormInput name="email" value={email} handleChange={handleChange} type="email" label="Email" required/>
     <FormInput name="password" value={password} handleChange={handleChange} type="password" label="Password" required/>
     <CustomButton type="submit">Sign In</CustomButton>
-<CustomButton onClick={signInWithGoogle}> {' '}Sign in with Google {' '}</CustomButton>
+<CustomButton onClick={signInWithGoogle} isGoogleSignIn> {' '}Sign in with Google {' '}</CustomButton>
   </form>
 </div>
 )
